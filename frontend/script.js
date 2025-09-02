@@ -65,7 +65,7 @@ function addMessage(text, sender) {
 // Reset chat on reload
 async function resetChat() {
   try {
-    await fetch("http://localhost:3000/reset", { method: "POST" });
+    await fetch("https://chatbot-s9xi.onrender.com/reset", { method: "POST" });
     addMessage("Hi there! How can I help you today?", "bot");
   } catch (err) {
     addMessage("⚠️ Error resetting chat.", "bot");
@@ -75,7 +75,7 @@ async function resetChat() {
 // Send user message to backend
 async function sendMessage(message) {
   try {
-    const res = await fetch("http://localhost:3000/chat", {
+    const res = await fetch("https://chatbot-s9xi.onrender.com/chat", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ message }),
