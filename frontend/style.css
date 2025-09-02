@@ -1,0 +1,192 @@
+/* Global dark theme */
+body {
+  font-family: 'Segoe UI', Roboto, sans-serif;
+  background: #121212;
+  color: #f0f0f0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+}
+
+/* Chat container */
+.chat-container {
+  width: 100%;
+  max-width: 450px;
+  height: 90vh;
+  background: #1e1e1e;
+  border-radius: 14px;
+  box-shadow: 0px 6px 18px rgba(0,0,0,0.6);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+}
+
+/* Header */
+.chat-header {
+  padding: 15px;
+  background: #252525;
+  border-bottom: 1px solid #333;
+  text-align: center;
+}
+
+.chat-header h1 {
+  font-size: 18px;
+  color: #8771a8;
+  margin: 0;
+}
+
+/* Chat messages */
+.chat-box {
+  flex: 1;
+  padding: 15px;
+  overflow-y: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.message {
+  padding: 10px 14px;
+  border-radius: 10px;
+  max-width: 80%;
+  line-height: 1.4;
+  font-size: 15px;
+  word-wrap: break-word;
+  animation: fadeIn 0.3s ease-in-out;
+}
+
+/* User messages (right side) */
+.user {
+  background: #745E96;
+  color: white;
+  align-self: flex-end;
+  border-bottom-right-radius: 2px;
+}
+
+/* Bot messages (left side) */
+.bot {
+  background: #2a2a2a;
+  color: #e0e0e0;
+  align-self: flex-start;
+  border-bottom-left-radius: 2px;
+}
+
+/* Input area */
+.input-container {
+  display: flex;
+  border-top: 1px solid #333;
+  background: #252525;
+  padding: 10px;
+}
+
+input {
+  flex: 1;
+  border: none;
+  outline: none;
+  padding: 12px;
+  border-radius: 8px;
+  background: #2a2a2a;
+  color: #f0f0f0;
+  font-size: 15px;
+}
+
+button {
+  margin-left: 10px;
+  border: none;
+  background: #745E96;
+  color: white;
+  border-radius: 50%;
+  width: 44px;
+  height: 44px;
+  cursor: pointer;
+  font-size: 18px;
+  transition: 0.2s;
+}
+
+button:hover {
+  background: #352d41;
+}
+
+/* Code block wrapper with copy button */
+.code-block {
+  position: relative;
+  margin: 8px 0;
+}
+
+.copy-btn {
+  position: absolute;
+  top: 6px;
+  right: 6px;
+  background: #2d2d2d;
+  height: 31.6px;
+  width: 31.6px;
+  border: none;
+  color: #aaa;
+  padding: 2px ;
+  border-radius: 4px;
+  font-size: 12px;
+  cursor: pointer;
+  transition: 0.2s;
+  opacity: 0.8;
+}
+
+.copy-btn:hover {
+  background: #444;
+  color: #fff;
+  opacity: 1;
+}
+
+/* Code block styling */
+pre {
+  background: #0d1117;
+  color: #c9d1d9;
+  padding: 12px;
+  border-radius: 8px;
+  overflow-x: auto;
+  font-family: "Fira Code", monospace;
+  font-size: 14px;
+  margin: 0;
+}
+
+code {
+  display: block;
+  white-space: pre-wrap;
+  word-wrap: break-word;
+}
+
+/* Highlight language colors */
+.language-bash {
+  color: #7ee787;
+}
+.language-js {
+  color: #ffab70;
+}
+.language-python {
+  color: #9cdcfe;
+}
+
+/* Scrollbar styling */
+.chat-box::-webkit-scrollbar {
+  width: 6px;
+}
+.chat-box::-webkit-scrollbar-thumb {
+  background: #444;
+  border-radius: 4px;
+}
+
+/* Smooth animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+/* Mobile-friendly */
+@media (max-width: 600px) {
+  .chat-container {
+    max-width: 100%;
+    height: 100vh;
+    border-radius: 0;
+  }
+}
