@@ -59,6 +59,11 @@ app.post("/reset", (req, res) => {
   res.json({ message: "Chat history reset" });
 });
 
+// check the server running status
+app.get("/", (req, res) => {
+  res.send("🤖 chat-bot server is running");
+});
+
 // Start server
 app.listen(PORT, () => {
   console.log(`🚀 Server running on http://localhost:${PORT}`);
